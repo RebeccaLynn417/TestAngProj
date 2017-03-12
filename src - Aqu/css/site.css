@@ -46,7 +46,7 @@ table, th, td {
 	width: 178px;
 	font-weight: bolder;
 	display: inline-block;
-	text-align: center;
+	text-align: left;
 	z-index: 10;
 }
 
