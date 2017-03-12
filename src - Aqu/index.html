@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="displayMembers">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/site.css" />
+	</head>
+	<body ng-controller="MController as displayMembers">
+		<div class="horzCent welcomeDiv">
+			Welcome to our repository of fascinating team members! Click the team member below to learn more! <br/>
+		</div>
+		<div class="horzCentFull">
+			<img id="magGlass" src="images/magnifyingGlass.png" class="magGlass">
+			<input type="text" name="searchMembers" class="search" ng-model="searchMembers" placeholder="Search" />
+		</div>
+		<div class="list-group groupConrols" style="display: flex;">
+			<div class="horzCent areaWrapper">
+				<div class="tableWrapper">
+					<table class="horzCent subTable" >
+						<thead>
+							<tr class="list-group-item divHeaders">
+								<th class="memberHeader">
+									<a href="#" ng-click="sortType = 'surname'">
+										Name
+										<span ng-show="sortType == 'surname'"></span>
+									</a>
+								</th>
+								<th class="memberHeader">
+									<a href="#" ng-click="sortType = 'occupation'">
+										Occupation
+										<span ng-show="sortType == 'occupation'"></span>
+									</a>
+								</th>
+								<th class="memberHeader">
+									<a href="#" ng-click="sortType = 'company'">
+										Company
+										<span ng-show="sortType == 'company'"></span>
+									</a>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="list-group-item tableFormatLeft"  ng-click="highlightRow(groupIndex, memberIndex)" ng-repeat="member in displayMembers.members | orderBy:sortType | filter:searchMembers" ng-init="memberIndex=$index"
+							ng-class="groupIndex==selectedGroup && memberIndex==selectedRow?'selected':''">
+								<td class="memberItem">
+									{{member.surname}},&nbsp;{{member.firstName}}
+								</td>
+								<td class="memberItem">
+									{{member.occupation }}
+								</td>
+								<td class="memberItem">
+									{{member.company}}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="groupedControls detailDiv">
+				<h3 class="detailCentering">
+					{{memberName}}
+				</h3>
+				<center><img id="detailPortrait" ng-src="{{portraitUrlDetail}}" class="detailCentering" width="150px" ng-show="portraitUrlDetail!==''"/> <br/>
+				<label id="detailMotto" value="Motto:" class="detailHeaderLarger">Motto: </label>
+				<label id="detailMottoVal" value="{{motto}}" class="detailValueLarger"/>{{motto}}</label></center>
+				
+				<label id="detailStAddr" value="Stree Address:" class="detailHeader">Street Address: </label>
+				<label id="detailStAddrVal" class="detailValue"/>{{streetAddr}}</label><br/>
+				
+				<label id="detailAddr2" value="City St, Zip:" class="detailHeader">City St, Zip: </label>
+				<label id="detailAddr2Val" class="detailValue"/>{{Addr2}}</label><br/>
+				
+				<label id="detailAddr3" value="Country:" class="detailHeader">Country: </label>
+				<label id="detailAddr3Val" class="detailValue"/>{{Addr3}}</label><br/>
+				
+				<label id="detailBirthday" value="Birthday:" class="detailHeader">Birthday: </label> 
+				<label id="detailBirthdayVal" class="detailValue">{{birthday}}</label><br/>
+				
+				<label id="detailEmailAddr" text="Email:" class="detailHeader">Email: </label>
+				<label id="detailEmailAddrVal" class="detailValue"/>{{emailAddr}}</label><br/>
+				
+				<label id="detailCompany" value="Company:" class="detailHeader">Company: </label>
+				<label id="detailCompanyVal" class="detailValue"/>{{company}}</label><br/>
+				
+				<label id="detailGeoLocation" value="Location:" class="detailHeader">Location:</label>  
+				<a href="{{geoLocation}}" target="_blank" id="detailGeoLocationVal" class="detailValue">{{geoLocation}}</a><br/>
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="scripts/angular.min.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/ui-bootstrap-tpls-2.5.0.min.js"></script>
+		
+
+	</body>
+</html>

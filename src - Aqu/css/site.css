@@ -1,0 +1,169 @@
+body {
+	margin: 0 auto;
+	font-family: helvetica, ariel, sans-serif;
+	max-width: 960px;
+}
+
+a {
+	color: white;
+}
+
+table, th, td {
+   margin: 0px;
+   padding: 12px 8px;
+}
+
+.list-group-item {
+	margin-bottom: -3px;
+	padding: 0px;
+}
+
+.mainMemberContainer {
+	margin: 0 auto;
+	max-width: 600px;
+	margin-top: 40px;
+	clear: both;
+	display: inline;
+}
+
+.subTable {
+	max-width: 600px;
+	border-radius: 5px;
+}
+
+.tableWrapper {
+	height: 430px;
+	overflow: auto;
+	border-radius: 5px;
+	padding: 0px;
+	margin-left: 20px;
+	margin-top: 30px;
+	position: fixed;
+	border-bottom: 1px groove #999999;
+}
+
+.memberHeader {
+	width: 178px;
+	font-weight: bolder;
+	display: inline-block;
+	text-align: center;
+	z-index: 10;
+}
+
+.divHeaders {
+	width: 578px;
+	margin: 0 auto;
+	font-size: 16px !important;
+	font-family: helvetica, ariel, sans-serif;
+	background-color: #999999;
+	color: white;
+	position: fixed;
+	margin-top: -48px;
+}
+
+.memberItem {
+	width: 180px;
+}
+
+.detailHeader {
+	color:#990099;
+	font-size: 14px;
+}
+
+.detailHeaderLarger {
+	color: #990099;
+	font-size: 17px;
+}
+
+.detailValue {
+	color: #2b228b;
+	font-size: 12px;
+}
+
+.detailValueLarger {
+	color: #2b228b;
+	font-size: 14px;
+}
+
+.detailCentering {
+	text-align: center;
+}
+
+.groupControls {
+	display: block;
+	display: flex;
+}
+
+.groupedControls {
+	clear: both;
+	display: inline;
+}
+
+.tableFormatLeft {
+	text-align: left;
+	width:560px;
+}
+
+.detailDiv {
+	clear: both;
+	height: 100%;
+	padding: 10px 20px;
+	margin: 7px 15px 0px 0px;
+	background-color: white;
+	width: 30%;
+	border-radius: 5px;
+	border-color: #333333;
+	-moz-box-shadow:    inset 0 0 10px #990099;
+    -webkit-box-shadow: inset 0 0 10px #990099;
+    box-shadow:         inset 0 0 10px #990099;
+}
+
+.horzCent {
+	margin: 0 auto;
+	text-align: center;
+	width: 560px;
+	font-size: 16px;
+	font-family: helvetica, ariel, sans-serif;
+}
+
+.horzCentFull {
+	margin: 0 auto;
+	text-align: center;
+	width: 860px;
+	font-size: 16px;
+	font-family: helvetica, ariel, sans-serif;
+}
+
+.areaWrapper {
+	flex: 1; 
+	margin-top: 25px;
+	margin-left: 27px;
+}
+
+.welcomeDiv {
+	margin: 10px 0px 5px 30px;
+	width: 900px;
+	color: #990066;
+	font-weight: bold;
+	text-align: center;
+}
+
+.selected {
+	background-color: #000066;
+	color: white;
+}
+
+.search {
+	width: 890px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	padding: 0px 5px 0px 20px;
+	display: inline;
+}
+
+.magGlass {
+	width: 18px;
+	position: absolute;
+	margin: 2px 0px 0px 2px;
+}
